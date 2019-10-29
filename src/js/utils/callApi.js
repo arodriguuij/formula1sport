@@ -7,15 +7,12 @@ export const getQuery = async (queryParameter) => {
 
     try {
         const res = await axios(url, {});
-        console.log(url, queryParameter, res);
-
         return relation(res, queryParameter.categoryQuery);
     } catch (err) {
         console.log(err);
     }
 };
 
-//http://ergast.com/api/f1/current/drivers
 const relation = (res, category) => {
     switch (category) {
         case 'seasons':

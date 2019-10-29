@@ -12,7 +12,7 @@ export default class View {
                 <!-- Content-->
             </div>
 
-            <footer id="footer">
+            <footer class="fixed-bottom bg-light">
                 <!-- Footer -->
             </footer>
         `;

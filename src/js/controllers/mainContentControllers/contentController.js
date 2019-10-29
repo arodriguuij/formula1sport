@@ -23,9 +23,9 @@ export default class contentController {
         this.category ? queryParameter = { categoryQuery: this.category.toLowerCase(), dataQuery: year+'/'+this.category.toLowerCase(), optionsQuery: '' } :
             queryParameter = { categoryQuery: 'year', dataQuery: year, optionsQuery: '' };
 
-        const data = await callApi.getQuery(queryParameter);
+        const data = await callApi.getQuery(queryParameter,);
         this.ContentView.clearContent();
-        this.ContentView.renderContentView();
+        this.ContentView.renderContentView(this.category, year);
         this.CardController.renderCard(data, this.category.toLowerCase());
     }
 }

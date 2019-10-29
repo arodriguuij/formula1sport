@@ -3,13 +3,15 @@ export default class ContentView {
 
     }
 
-    renderContentView() {
-        const mark = `<div id="cards-container"></div>`;
-        document.getElementById('main-view').insertAdjacentHTML('beforeend', mark);
+    renderContentView(category, year) {
+        const markCategoryTitle = `<h2 id="category-title" class="text-center">${category} - ${year}</h2>`;
+        const markCardsContainer = `<div id="cards-container"></div>`;
+        document.getElementById('main-view').insertAdjacentHTML('beforeend', markCategoryTitle);
+        document.getElementById('main-view').insertAdjacentHTML('beforeend', markCardsContainer);
     }
 
     clearContent() {
-        if (document.getElementById('main-view').children[0])
-            document.getElementById('main-view').removeChild(document.getElementById('main-view').children[0]);
+        while (document.getElementById('main-view').children.length>0)
+         document.getElementById('main-view').removeChild(document.getElementById('main-view').children[0]);
     }
 }

@@ -1,5 +1,6 @@
 import MainController from './mainContentControllers/mainController';
 import NavBarController from './navBarControllers/navBarController';
+import FooterController from './footerController/footerController'
 import MainModel from '../models/mainModel'
 import $ from 'jquery'
 
@@ -8,7 +9,8 @@ export default class Controller {
     this.model = model;
     this.view = view;
     this.navBarController = new NavBarController(this.model.categories);
-    this.mainController = new MainController(new MainModel(this.model.fullScreen, ''))
+    this.mainController = new MainController(new MainModel(this.model.fullScreen, ''));
+    this.footerController = new FooterController();
 
     this.renderBody();
     this.renderNavBar();
@@ -46,7 +48,6 @@ export default class Controller {
   };
 
   renderFooter() {
-    // TODO: footer
+    this.footerController.renderFooterView();
   };
-
 }

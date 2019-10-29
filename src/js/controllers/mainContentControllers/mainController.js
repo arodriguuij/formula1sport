@@ -13,7 +13,6 @@ export default class MainController {
     }
 
     listeners() {
-        //$(document).on('clic-category-renderSideBar', (e, el, limit, offset) => {
         $(document).on('clic-category-renderSideBar', (e, el) => {
             this.ContentController.category = el.textContent;
             const queryParams = { categoryQuery: 'seasons', dataQuery: 'seasons', optionsQuery: `?limit=10&offset=60` };

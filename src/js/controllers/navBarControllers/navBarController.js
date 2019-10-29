@@ -55,10 +55,7 @@ export default class NavBarController {
     }
 
     renderSideBar(e) {
-        console.log(e.target.text)
         $(document).trigger('show-sideBar');
-        //let limit= 11, offset= 59;
-        //$(document).trigger('clic-category-renderSideBar', [e.target, limit, offset]);
         $(document).trigger('clic-category-renderSideBar', [e.target]);
     }
 }

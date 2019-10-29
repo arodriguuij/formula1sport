@@ -25,13 +25,6 @@ export default class SideBarController {
                 this.SideBarItemController.renderSideBarItem(array[i]);
             }
 
-            // TODO: Buttons
-            /*
-            if(array.length > 10){
-                this.SideBarView.renderButtons(false, false);
-            }
-            */
-
             const sidebarResults = document.getElementById('sidebar-items');
             this.addEventListener(sidebarResults);
 
